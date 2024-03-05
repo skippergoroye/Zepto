@@ -8,7 +8,7 @@ import Image from "next/image";
 import { LoginBackgroundImage } from "../../assets/icons";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import { Input, Button } from "../components/index";
+import { Input, Button } from "./components/index";
 
 const schema = yup.object().shape({
   email: yup
@@ -21,6 +21,9 @@ const schema = yup.object().shape({
     .min(6, "password must be at least 6 characters")
     .max(20, "password must not exceed 15 characters"),
 });
+
+
+
 
 export default function Home() {
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
@@ -89,6 +92,8 @@ export default function Home() {
                 {errors.email?.message}
               </p>
             </div>
+
+
 
             {/* password */}
             <div>
